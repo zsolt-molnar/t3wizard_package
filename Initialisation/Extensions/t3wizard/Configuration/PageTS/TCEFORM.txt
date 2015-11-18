@@ -1,0 +1,54 @@
+#################
+#### TCEFORM ####
+#################
+TCEFORM {
+    pages {
+        layout.disabled = 1
+    }
+    tt_content {
+        header_layout {
+            altLabels {
+                1 = H1
+                2 = H2
+                3 = H3
+                4 = H4
+                5 = H5
+            }
+        }
+        imagecols {
+            removeItems = 5,7,8
+        }
+        menu_type {
+            addItems {
+                news = Display Subpages as News Entries
+            }
+        }
+		
+		section_frame {
+		  #removeItems = 1,5,6,10,11,12,20,21,66
+		  #altLabels.0 = White
+		  addItems {
+			#255 = No frame
+			#101 = Gray divider
+			#102 = White divider
+			#103 = Info Item
+			#140 = Row
+		  }
+		  disableNoMatchingValueElement = 1
+		}		
+
+        // NOBODY wants or should edit this - really, let them disappear
+        table_bgColor.disabled = 1
+        table_border.disabled = 1
+        table_cellspacing.disabled = 1
+        table_cellpadding.disabled = 1
+        pi_flexform {
+            table {
+                sDEF {
+                    acctables_nostyles.disabled = 0
+                    acctables_tableclass.disabled = 0
+                }
+            }
+        }
+    }
+}

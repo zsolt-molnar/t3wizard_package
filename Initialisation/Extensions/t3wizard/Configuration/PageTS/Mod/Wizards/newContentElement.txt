@@ -1,0 +1,10 @@
+####################################
+#### EXTRA CONTENT ELEMENTS 	####
+####################################
+mod.wizards {
+    newContentElement {
+        wizardItems {
+
+        }
+    }
+}

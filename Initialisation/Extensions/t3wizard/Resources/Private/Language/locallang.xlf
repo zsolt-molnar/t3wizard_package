@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-03-24T08:08:57Z" product-name="t3wizard">
+		<header/>
+		<body>
+            <trans-unit id="misc.title">
+                <source>T3Wizard</source>
+            </trans-unit>		
+            <trans-unit id="misc.youAreHere">
+                <source>You are here</source>
+            </trans-unit>
+            <trans-unit id="misc.home">
+                <source>Home</source>
+            </trans-unit>	
+            <trans-unit id="404">
+                <source>404</source>
+            </trans-unit>	
+            <trans-unit id="404.text">
+                <source>The page you're looking for could not be found. Here are some helpful links to get you back on track</source>
+            </trans-unit>				
+		</body>
+	</file>
+</xliff>

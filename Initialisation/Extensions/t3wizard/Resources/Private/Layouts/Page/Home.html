@@ -1,0 +1,38 @@
+<f:render partial="Navigation/Header" arguments="{_all}" />
+<!-- Header Carousel -->
+<f:if condition="{data.tx_mask_slider}">
+	<header id="myCarousel" class="carousel slide">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<f:for each="{data.tx_mask_slider}" as="slide" iteration="iterator">
+				<li data-target="#myCarousel" data-slide-to="{iterator.index}"{f:if(condition: iterator.isFirst, then: ' class="active"')}></li>			
+			</f:for>
+		</ol>	
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<f:for each="{data.tx_mask_slider}" as="slide" iteration="iterator">
+				<f:for each="{slide.tx_mask_image}" as="file">
+					<div class="{f:if(condition: iterator.isFirst, then: 'item active', else: 'item')}">
+						<div class="fill" style="background-image:url('{f:uri.image(src: file.uid, treatIdAsReference: 1)}');"></div>
+						<div class="carousel-caption">
+							<h2>{slide.tx_mask_caption}</h2>
+						</div>
+					</div>	
+				</f:for>					
+			</f:for>		
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="icon-prev"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="icon-next"></span>
+		</a>
+	</header>
+</f:if>
+<!-- Page Content -->
+<div class="container">
+	<f:render section="Main" />
+	<f:render partial="Structure/Footer" arguments="{_all}" />
+</div>
+<!-- /.container -->

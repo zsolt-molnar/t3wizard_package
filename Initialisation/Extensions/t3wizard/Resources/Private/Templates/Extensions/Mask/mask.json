@@ -1,0 +1,181 @@
+{
+    "tt_content": {
+        "elements": {
+            "testelement": {
+                "label": "Test element",
+                "key": "testelement",
+                "shortLabel": "Test",
+                "description": "test stuff",
+                "icon": "map-signs",
+                "color": "#000000",
+                "columns": [
+                    "css_class",
+                    "header",
+                    "rowDescription",
+                    "tx_mask_linklabel",
+                    "tx_mask_linkitem"
+                ],
+                "labels": [
+                    "",
+                    "Element title",
+                    "Element Description",
+                    "Link Label",
+                    "Item Link"
+                ],
+                "options": {
+                    "2": "rte"
+                }
+            }
+        },
+        "sql": {
+            "tx_mask_linklabel": {
+                "tt_content": {
+                    "tx_mask_linklabel": "tinytext"
+                }
+            },
+            "tx_mask_linkitem": {
+                "tt_content": {
+                    "tx_mask_linkitem": "tinytext"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_linklabel": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "size": "",
+                    "max": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "key": "linklabel"
+            },
+            "tx_mask_linkitem": {
+                "config": {
+                    "type": "input",
+                    "wizards": {
+                        "_PADDING": "2",
+                        "link": {
+                            "type": "popup",
+                            "title": "Link",
+                            "icon": "link_popup.gif",
+                            "module": {
+                                "name": "wizard_element_browser",
+                                "urlParameters": {
+                                    "mode": "wizard"
+                                }
+                            },
+                            "JSopenParams": "height=300,width=500,status=0,menubar=0,scrollbars=1",
+                            "params": {
+                                "blindLinkOptions": "file,mail,folder,url"
+                            }
+                        }
+                    },
+                    "eval": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "key": "linkitem"
+            }
+        }
+    },
+    "pages": {
+        "elements": {
+            "1": {
+                "label": "Page with slider",
+                "key": "1",
+                "shortLabel": "dummy shortitle",
+                "description": "dummy description",
+                "columns": [
+                    "tx_mask_slider"
+                ],
+                "labels": [
+                    "Slide"
+                ]
+            }
+        },
+        "sql": {
+            "tx_mask_slider": {
+                "pages": {
+                    "tx_mask_slider": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_slider": {
+                "config": {
+                    "type": "inline",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_field": "parentid",
+                    "foreign_table_field": "parenttable",
+                    "foreign_sortby": "sorting",
+                    "appearance": {
+                        "collapseAll": "1",
+                        "levelLinksPosition": "top",
+                        "showSynchronizationLink": "1",
+                        "showPossibleLocalizationRecords": "1",
+                        "showAllLocalizationLink": "1",
+                        "useSortable": "1",
+                        "enabledControls": {
+                            "dragdrop": "1"
+                        }
+                    },
+                    "minitems": "0",
+                    "maxitems": ""
+                },
+                "exclude": "1",
+                "key": "slider"
+            }
+        }
+    },
+    "sys_file_reference": {
+        "sql": {
+            "tx_mask_image": {
+                "sys_file_reference": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        }
+    },
+    "tx_mask_slider": {
+        "sql": {
+            "tx_mask_caption": {
+                "tx_mask_slider": {
+                    "tx_mask_caption": "tinytext"
+                }
+            },
+            "tx_mask_image": {
+                "tx_mask_slider": {
+                    "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_caption": {
+                "config": {
+                    "type": "input",
+                    "eval": "",
+                    "size": "",
+                    "max": "",
+                    "default": ""
+                },
+                "exclude": "1",
+                "inlineParent": "tx_mask_slider",
+                "label": "Caption",
+                "key": "caption"
+            },
+            "tx_mask_image": {
+                "exclude": "1",
+                "options": "file",
+                "config": {
+                    "minitems": "1",
+                    "maxitems": "1"
+                },
+                "inlineParent": "tx_mask_slider",
+                "label": "Image",
+                "key": "image"
+            }
+        }
+    }
+}

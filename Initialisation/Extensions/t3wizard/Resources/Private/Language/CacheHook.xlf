@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-03-27T13:30:13Z" product-name="core_package">
+		<header/>
+		<body>
+			<trans-unit id="clearBranchCache">
+				<source>Flush branch cache</source>
+			</trans-unit>
+			<trans-unit id="clearBranchCacheError">
+				<source>Flushing the page cache of the branch failed.</source>
+			</trans-unit>
+			<trans-unit id="clearBranchCacheSuccess">
+				<source>Flushing the page cache of the branch succeeded.</source>
+			</trans-unit>
+			<trans-unit id="clearPageCache">
+				<source>Flush page cache</source>
+			</trans-unit>
+			<trans-unit id="clearPageCacheError">
+				<source>Flushing the page cache failed.</source>
+			</trans-unit>
+			<trans-unit id="clearPageCacheSuccess">
+				<source>Flushing the page cache succeeded.</source>
+			</trans-unit>
+			<trans-unit id="clearLangCache">
+				<source>Flush lang cache</source>
+			</trans-unit>
+			<trans-unit id="clearMediumCache">
+				<source>Flush conf cache</source>
+			</trans-unit>
+			<trans-unit id="clearFullCache">
+				<source>Flush ALL cache</source>
+			</trans-unit>	
+			<trans-unit id="clearCacheSuccess">
+				<source>Flushing the cache succeeded.</source>
+			</trans-unit>	
+			<trans-unit id="clearCacheError">
+				<source>Flushing the cache failed.</source>
+			</trans-unit>			
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,88 @@
+#################
+#### CONTENT ####
+#################
+
+lib.dynamicContent = COA
+lib.dynamicContent {
+    5 = LOAD_REGISTER
+    5  {
+        colPos.cObject = TEXT 
+        colPos.cObject {
+            value.current = 1
+            ifEmpty = 0
+        }
+    }
+    20 < styles.content.get
+    20.select.where = colPos={register:colPos}
+    20.select.where.insertData = 1
+}
+lib.dynamicContentSlide < lib.dynamicContent
+lib.dynamicContentSlide.20.slide = -1
+
+#############################
+####    CLEANING	     ####
+#############################
+
+// Parse functions ========================================
+lib.parseFunc_RTE {
+	nonTypoTagStdWrap.encapsLines {
+	// remove class="bodytext" from paragraphs
+		addAttributes.P.class >
+		addAttributes.P.class.setOnly >
+	}
+	externalBlocks.blockquote.callRecursive.tagStdWrap.HTMLparser.tags.blockquote.overrideAttribs >
+}
+lib.parseFunc.allowTags = a, abbr, acronym, address, blockquote, b, br, caption, center, cite, code, div, em, font, h1, h2, h3, h4, h5, h6, hr, i, img, li, link, ol, p, pre, q, sdfield, span, strike, strong, sub, sup, table, thead, tbody, tfoot, td, th, tr, tt, u, ul, iframe
+lib.parseFunc_RTE.allowTags < lib.parseFunc.allowTags
+
+
+// Remove class="csc-firstHeader" attribute for <Hx> tags =========================
+lib.stdheader {
+	3.headerClass >
+	stdWrap.dataWrap = |
+}
+
+// Make sure there're no annoying divs wrapped around hx elements:=================
+lib.stdheader.10.stdWrap.dataWrap >
+lib.stdheader.stdWrap.dataWrap >
+
+# Disable the prefix comments for each CE
+page.config.disablePrefixComment = 1
+
+# Clear out the "bodytext" class from all paragraphs (<p></p>)
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
+
+# Remove the classes in all headers (H1, H2, H3 etc)
+lib.stdheader.stdWrap.dataWrap >
+lib.stdheader.3.headerClass >
+tt_content.stdWrap.dataWrap >
+lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
+tt_content.stdWrap.innerWrap >
+
+lib.copyright = TEXT
+lib.copyright {
+	value = Copyright © 2015 T3Wizard. All rights reserved.
+}
+
+lib.logo = IMAGE
+lib.logo {
+	file = {$page.includePath.images}{$page.includePath.projectFolder}logo.png
+	wrap = <div class="logo"><a accesskey="1" title="logo" target="_blank" href="#">|</a></div>
+}
+
+lib.footerText = RECORDS
+lib.footerText {
+	source = {$page.content.footerText}
+	tables = tt_content
+	dontCheckPid = 1
+}
+
+lib.partners = RECORDS
+lib.partners {
+	source = {$page.content.partners}
+	tables = tt_content
+	dontCheckPid = 1
+}
+
+
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="t3wizard">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>		
+            <trans-unit id="backend_layout.oneCol">
+                <source>One Column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.twoCol">
+                <source>Two Columns</source>
+            </trans-unit>				
+            <trans-unit id="backend_layout.column.col1">
+                <source>Left Column</source>
+            </trans-unit>	
+            <trans-unit id="backend_layout.column.col2">
+                <source>Right Column</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.topRow">
+                <source>Top Row</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.bottomRow">
+                <source>Bottom Row</source>
+            </trans-unit>	
+            <trans-unit id="backend_layout.default.slider">
+                <source>Slider</source>
+            </trans-unit>	
+            <trans-unit id="backend_layout.default.content">
+                <source>Content Area</source>
+            </trans-unit>				
+        </body>
+    </file>
+</xliff>
