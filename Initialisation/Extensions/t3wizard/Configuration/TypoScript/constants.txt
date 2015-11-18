@@ -1,1 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3wizard/Configuration/TypoScript/Constants">

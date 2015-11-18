@@ -1,8 +1,0 @@
-# cat=Basic/Skin/10; type=string; label=Logo Top: Default [../typo3conf/ext/t3wizard/Resources/Public/Images/Backend/toplogo.png]
-Logo = ../typo3conf/ext/t3wizard/Resources/Public/Images/Backend/toplogo.png
-
-# cat=Basic/Skin/20; type=string; label=Logo Login: Default [../typo3conf/ext/t3wizard/Resources/Public/Images/Backend/logo.png]
-LoginLogo = ../typo3conf/ext/t3wizard/Resources/Public/Images/Backend/logo.png
-
-# cat=Basic/RealUrl/10; type=boolean; label=Use RealUrl Config from T3Wizard
-UseRealUrlConfig = 1
